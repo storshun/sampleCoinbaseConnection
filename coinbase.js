@@ -12,6 +12,8 @@ async function handleCoinbaseOrder(apiKey, secretKey, message) {
   });
   timestamp = Math.floor(timestamp.data.epoch).toString();
   let config = {
+    method: "",
+    url: "",
     headers: {
       "CB-ACCESS-KEY": apiKey,
       "CB-ACCESS-SIGN": "",
@@ -73,3 +75,17 @@ async function handleCoinbaseOrder(apiKey, secretKey, message) {
   }
 }
 module.exports = handleCoinbaseOrder;
+
+
+//Example of request sent to accounts endpoint:
+// {
+//   headers: {
+//     'CB-ACCESS-KEY': 'ASTRINGGOESHERE',
+//     'CB-ACCESS-SIGN': '98ccb2c0a897b0a6792d8019b7d3600238396d04c7a3c139b631167d2d41eaf8',
+//     'CB-ACCESS-TIMESTAMP': '1680289091',
+//     'Content-Type': 'application/json'
+//   },
+//   data: {},
+//   method: 'GET',
+//   url: 'https://api.coinbase.com/api/v3/brokerage/accounts'
+// }
