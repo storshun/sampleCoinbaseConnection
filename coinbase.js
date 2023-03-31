@@ -77,15 +77,14 @@ async function handleCoinbaseOrder(apiKey, secretKey, message) {
 module.exports = handleCoinbaseOrder;
 
 
-//Example of request sent to accounts endpoint:
 // {
+//   method: 'GET',
+//   url: 'https://api.coinbase.com/api/v3/brokerage/accounts',
 //   headers: {
-//     'CB-ACCESS-KEY': 'ASTRINGGOESHERE',
-//     'CB-ACCESS-SIGN': '98ccb2c0a897b0a6792d8019b7d3600238396d04c7a3c139b631167d2d41eaf8',
-//     'CB-ACCESS-TIMESTAMP': '1680289091',
+//     'CB-ACCESS-KEY': 'keyStringHere',
+//     'CB-ACCESS-SIGN': 'b79359cc68c411b42c906c0b54c48192c8081b8c7c943609417c2a00dfd94a05',
+//     'CB-ACCESS-TIMESTAMP': '1680303764',
 //     'Content-Type': 'application/json'
 //   },
-//   data: {},
-//   method: 'GET',
-//   url: 'https://api.coinbase.com/api/v3/brokerage/accounts'
+//   data: {}
 // }
